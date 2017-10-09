@@ -1,0 +1,26 @@
+<meta>
+    <info name="MoneyAPI" author="rootcause" type="script" async="true" />
+
+    <!-- Files -->
+    <script src="MoneyAPI.cs" type="server" lang="csharp" />
+    <script src="MoneyHUD.js" type="client" lang="javascript" />
+
+    <!-- Functions -->
+    <export class="MoneyAPI" function="GetMoney" />
+    <export class="MoneyAPI" function="ChangeMoney" />
+    <export class="MoneyAPI" function="SetMoney" />
+
+    <!-- Settings -->
+    <settings>
+        <setting name="walletDB" value="wallets.db" default="wallets.db" description="Name of the database file." />
+        <setting name="walletDefault" value="250" default="250" description="Starting money." />
+        <setting name="walletCap" value="9000000000000000" default="9000000000000000" description="Money cap." />
+        <setting name="walletInterval" value="5" default="5" description="Autosave interval in minutes, write 0 to disable." />
+        <setting name="walletSave" value="false" default="false" description="Save money after every operation. (not recommended)" />
+        <setting name="walletLog" value="true" default="false" description="Log money changes." />
+    </settings>
+
+    <!-- Libraries -->
+    <assembly ref="System.Data.dll" />
+    <assembly ref="System.Data.SQLite.dll" />
+</meta>
